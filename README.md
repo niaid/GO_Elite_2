@@ -11,9 +11,45 @@ Python 2.7,
 **Further Documentation**
 https://code.google.com/archive/p/go-elite/wikis
 
+**Instructions**
+
+
+**Unzip** Ensure that GO-Elite/Databases/EnsMart62Plus/Hs/nested.7z is unzipped.
+
+
+**Input file** The input file needs to be in csv format. The first row becomes the title of your protein list. This title can have letters, numbers, spaces of special characters. Note that the spaces and special charaters will be converted to "." in the output. Each column needs to have at least one offical gene smybol. We discussed making the requirment be at least three.
+
+**Background** The background is a list of offical gene smybols in witch all other list/s are compared to determine enrichment of biological functions, struture motifs, or localization. This background list, if not specified is the column with the largest number of terms. The background must be larger than the list it is being compared too. I must also contain every gene that is found in any other column.
 
 ## Test with demonstration data:
 
+**Instructions**
+There are two ways to run this pipeline.
+1) Use the R script to parse the data and prep it for GO-elite
+2) Use the prepared data in the "Example_inputs_GO_Elite" folder.
+
+For methond one simply set your working directory in R using setwd("your\file\path")
+Then run the script the output should be identical to the contents of Example_outputs
+
+For method two open a new session in R and enter the following command
+
+```sh
+system("C:/Python27/python C:/Users/bishofij/Proteomics_Pipeline/GO-Elite_v.1.2.5-Py/GO_Elite.py 
+--species Hs 
+--mod Ensembl 
+--permutations \"FisherExactTest\" 
+--method \"z-score\" 
+--zscore 1.96 
+--pval 0.05 
+--num 5 
+--input C:/Users/bishofij/Proteomics_Pipeline/go-elite_r_projects/test_inputs4/ 
+--denom C:/Users/bishofij/Proteomics_Pipeline/go-elite_r_projects/test_inputs4/background/ 
+--customSet C:/Users/bishofij/Proteomics_Pipeline/GO-Elite_v.1.2.5-Py/Databases/EnsMart62Plus/C2/ 
+--dataToAnalyze all 
+--output C:/Users/bishofij/Proteomics_Pipeline/go-elite_r_projects/test_inputs4/")
+```
+
+Not sure what this is?
 ```sh
 $ python2 GO_Elite.py --species Hs \
 --mod Ensembl \
@@ -26,18 +62,6 @@ $ python2 GO_Elite.py --species Hs \
 --dataToAnalyze all \
 --output test_installation/demo_outs
 ```
-
-**Instructions**
-
-
-**Unzip** Ensure that GO-Elite/Databases/EnsMart62Plus/Hs/nested.7z is unzipped.
-
-
-**Input file** The input file needs to be in csv format. The first row becomes the title of your protein list. This title can have letters, numbers, spaces of special characters. Note that the spaces and special charaters will be converted to "." in the output. Each column needs to have at least one offical gene smybol. We discussed making the requirment be at least three.
-
-**Background** The background is a list of offical gene smybols in witch all other list/s are compared to determine enrichment of biological functions, struture motifs, or localization. This background list, if not specified is the column with the largest number of terms. The background must be larger than the list it is being compared too. I must also contain every gene that is found in any other column.
-
-
 
 **Steps of the pipeline**
 
