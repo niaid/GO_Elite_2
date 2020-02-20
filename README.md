@@ -11,7 +11,7 @@ Python 2.7,
 **Further Documentation**
 https://code.google.com/archive/p/go-elite/wikis
 
-**Instructions**
+**Before Starting Instructions**
 
 
 **Unzip** Ensure that GO-Elite/Databases/EnsMart62Plus/Hs/nested.7z is unzipped.
@@ -24,6 +24,10 @@ https://code.google.com/archive/p/go-elite/wikis
 ## Test with demonstration data:
 
 **Instructions**
+First rename GO_Elite_2-master to GO-Elite_v.1.2.5-Py
+
+Then under the Database folder add the databases found at ......
+
 There are two ways to run this pipeline.
 1) Use the R script to parse the data and prep it for GO-elite
 2) Use the prepared data in the "Example_inputs_GO_Elite" folder.
