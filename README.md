@@ -41,6 +41,13 @@ For method two open a new session in R and enter the following command
 system("C:/Python27/python C:/Users/bishofij/Proteomics_Pipeline/GO-Elite_v.1.2.5-Py/GO_Elite.py --species Hs --mod Ensembl --permutations \"FisherExactTest\" --method \"z-score\" --zscore 1.96 --pval 0.05 --num 5 --input C:/Users/bishofij/Proteomics_Pipeline/go-elite_r_projects/test_inputs4/ --denom C:/Users/bishofij/Proteomics_Pipeline/go-elite_r_projects/test_inputs4/background/ --customSet C:/Users/bishofij/Proteomics_Pipeline/GO-Elite_v.1.2.5-Py/Databases/EnsMart62Plus/C2/ --dataToAnalyze all --output C:/Users/bishofij/Proteomics_Pipeline/go-elite_r_projects/test_inputs4/")
 ```
 
+Alternatively you can run straight from command line with the following.
+```sh
+/Python27/python GO_Elite.py --species Hs --input test_inputs4/ --denom test_inputs4/background/ --customSet Databases/EnsMart62Plus/C2/ --output test_inputs4/
+```
+
+
+
 Not sure what this is?
 ```sh
 $ python2 GO_Elite.py --species Hs \
