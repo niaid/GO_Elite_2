@@ -43,7 +43,7 @@ system("C:/Python27/python C:/Users/bishofij/Proteomics_Pipeline/GO-Elite_v.1.2.
 
 Alternatively you can run straight from command line with the following.
 ```sh
-C:/Python27/python.exe C:/Users/bishofij/Proteomics_Pipeline/GO-Elite_v.1.2.5-Py/GO_Elite.py --species Hs --input C:/Users/bishofij/Proteomics_Pipeline/go-elite_r_projects/test_inputs4/ --denom C:/Users/bishofij/Proteomics_Pipeline/go-elite_r_projects/test_inputs4/background/ --customSet C:/Users/bishofij/Proteomics_Pipeline/GO-Elite_v.1.2.5-Py/Databases/EnsMart62Plus/C2/ --output C:/Users/bishofij/Proteomics_Pipeline/go-elite_r_projects/test_inputs4/
+/Python27/python GO_Elite.py --species Hs --input test_inputs4/ --denom test_inputs4/background/ --customSet Databases/EnsMart62Plus/C2/ --output test_inputs4/
 ```
 
 
